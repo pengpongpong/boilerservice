@@ -12,9 +12,9 @@ const Footer = () => {
                 <a href="/impressum" className="daisy_link daisy_link-hover text-base">Impressum</a>
             </div>
             <address>
-                <span>Fa. Paulmichl - Der Boilerspezialist</span>
-                <span>Pirchäckerstraße 53</span>
-                <span>8053 - Graz</span>
+                Fa. Paulmichl - Der Boilerspezialist <br />
+                Pirchäckerstraße 53 <br />
+                8053 - Graz <br />
             </address>
             <div>
                 <span>Copyright © {year} - Fa. Paulmichl Boilerservice</span>

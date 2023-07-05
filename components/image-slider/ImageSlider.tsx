@@ -1,17 +1,21 @@
 "use client"
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import React, { useEffect } from 'react'
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import { register } from "swiper/element/bundle";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
 import { SwiperOptions } from "swiper/types";
+import Image from "next/image";
 
-type Props = {}
+interface ImageProps {
+    url: string;
+}
 
-const ImageSlider = (props: Props) => {
+const ImageSlider = ({ images }: { images: ImageProps[] }) => {
     register()
 
     useEffect(() => {
@@ -47,8 +51,8 @@ const ImageSlider = (props: Props) => {
                     spaceBetween: 0,
                 },
                 1280: {
-                    initialSlide: 1,
-                    slidesPerView: 1,
+                    initialSlide: 2,
+                    slidesPerView: 3,
                     spaceBetween: 10,
                 },
             },
@@ -58,18 +62,17 @@ const ImageSlider = (props: Props) => {
                 slideShadows: true,
             },
         };
-        
+
         new Swiper(".swiper", swiperParams);
     }, [])
+
+
     return (
         <div className="swiper">
             <div className="swiper-wrapper">
-                <div className="swiper-slide">Slide 1</div>
-                <div className="swiper-slide">Slide 2</div>
-                <div className="swiper-slide">Slide 3</div>
-                <div className="swiper-slide">Slide 3</div>
-                <div className="swiper-slide">Slide 3</div>
-                <div className="swiper-slide">Slide 3</div>
+                {images.map(obj => (
+                    <Image className="swiper-slide" key={obj.url} style={{ width: "auto", height: "auto", objectFit: "cover" }} width={400} height={300} src={obj.url} alt="" />
+                ))}
             </div>
             <div className="swiper-pagination"></div>
 

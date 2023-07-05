@@ -8,7 +8,7 @@ const NavLink = ({ title, url }: { title: string, url: string }) => {
 
 const Navbar = () => {
     return (
-        <header className="sticky top-0 bg-base-100">
+        <header className="sticky top-0 bg-base-100 z-10">
             <nav className="my-3 mx-6 flex justify-between items-center">
                 <Link href="/" className="uppercase font-headline text-5xl tracking-widest">Paulmichl</Link>
                 <span className="tracking-widest font-text text-xl">Montag - Freitag | 08:00 - 17:00</span>
@@ -26,23 +26,23 @@ const Navbar = () => {
             <nav className="p-8 bg-primary h-10 flex justify-center items-center font-text">
                 <NavLink
                     title="Home"
-                    url=""
+                    url="/"
                 />
                 <NavLink
                     title="Boilerservice"
-                    url=""
+                    url="/boilerservice"
                 />
                 <NavLink
                     title="Galerie"
-                    url=""
+                    url="/galerie"
                 />
                 <NavLink
                     title="Über uns"
-                    url=""
+                    url="/ueber-uns"
                 />
                 <NavLink
                     title="Kontakt"
-                    url=""
+                    url="/kontakt"
                 />
             </nav>
         </header>
