@@ -6,13 +6,21 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    fontFamily: {
+      text: ["Lexend", "sans-serif"],
+      headline: ["Bruno Ace", "cursive"]
     },
+    extend: {},
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    styled: true,
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    themes: ["corporate"],
+    prefix: "daisy_"
+  }
 }
