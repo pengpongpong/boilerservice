@@ -7,7 +7,7 @@ const UeberUnsPage = () => {
     return (
         <>
             <header>
-                <h1 className="my-8 text-5xl text-center font-text">Über uns</h1>
+                <h1 className="mb-8 mt-12 text-5xl text-center font-text">Über uns</h1>
             </header>
             <main className="my-8 w-1/2 mx-auto font-text flex gap-4 flex-grow">
                 <section className="w-full flex flex-col gap-6">

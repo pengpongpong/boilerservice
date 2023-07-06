@@ -1,28 +1,21 @@
-import DialogContainer from "@/components/image-slider/DialogContainer"
-import ImageSliderThumbs from "@/components/image-slider/ImageSliderThumbs"
+import CardContainer from "@/components/card/Card"
+
 import React, { useRef } from 'react'
+
 
 
 const GaleriePage = () => {
     const images = [
-        {
-            url: "/images/boiler1.jpeg"
-        },
-        {
-            url: "/images/boiler2.jpeg"
-        },
-        {
-            url: "/images/boiler3.jpeg"
-        },
-        {
-            url: "/images/boiler4.jpeg"
-        },
-        {
-            url: "/images/boiler5.jpeg"
-        },
-        {
-            url: "/images/boiler6.jpeg"
-        },
+        { url: "https://swiperjs.com/demos/images/nature-1.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-2.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-3.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-4.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-5.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-6.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-7.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-8.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-9.jpg" },
+        { url: "https://swiperjs.com/demos/images/nature-10.jpg" },
     ]
 
 
@@ -33,9 +26,7 @@ const GaleriePage = () => {
                 <h1>Galerie</h1>
             </header>
             <main className="flex-grow p-8">
-                <DialogContainer>
-                <ImageSliderThumbs images={images} />
-                </DialogContainer>
+                <CardContainer images={images} />
             </main>
         </>
     )

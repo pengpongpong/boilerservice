@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     fontFamily: {
       text: ["Lexend", "sans-serif"],
-      headline: ["Bruno Ace", "cursive"]
+      headline: ["Bruno Ace", "cursive"],
+      ubuntu: ["Ubuntu", "sans-serif"]
     },
     extend: {},
   },

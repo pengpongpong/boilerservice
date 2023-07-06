@@ -6,7 +6,7 @@ const KontaktPage = () => {
     return (
         <>
             <header>
-                <h1 className="my-8 text-5xl text-center font-text">Kontakt</h1>
+                <h1 className="mb-8 mt-12 text-5xl text-center font-text">Kontakt</h1>
             </header>
             <main className="m-12 w-2/5 mx-auto font-text">
                 <address>

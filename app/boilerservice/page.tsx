@@ -7,7 +7,7 @@ const BoilerservicePage = (props: Props) => {
     return (
         <>
             <header>
-                <h1 className="my-8 text-5xl text-center tracking-wide">Boilerservice</h1>
+                <h1 className="mb-8 mt-12 text-5xl text-center tracking-wide">Boilerservice</h1>
             </header>
             <main className="m-12 font-text text-center flex-grow">
                 <section className="w-2/3 mx-auto flex flex-col gap-4">

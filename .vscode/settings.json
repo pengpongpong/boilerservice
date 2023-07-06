@@ -27,7 +27,9 @@
         "Bild",
         "Boilerservice",
         "Boilerwartung",
+        "clsx",
         "dabei",
+        "Deutschlandsberg",
         "Dichtung",
         "Dienstleistungen",
         "diese",
@@ -58,6 +60,7 @@
         "Galerie",
         "garantieren",
         "gegebenenfalls",
+        "Gegend",
         "gleich",
         "gleichzeitig",
         "gültig",
@@ -120,6 +123,7 @@
         "sein",
         "Seite",
         "selbst",
+        "setshow",
         "sich",
         "Sicherheit",
         "Situationen",
@@ -133,6 +137,7 @@
         "stehen",
         "stolz",
         "Succesfully",
+        "Südoststeiermark",
         "swiper",
         "Swiper",
         "Technik",
@@ -145,6 +150,7 @@
         "üblichen",
         "umfangreichen",
         "umfassende",
+        "Umgebung",
         "Umsetzung",
         "Umwelt",
         "Unsere",
@@ -156,6 +162,7 @@
         "Vertrauen",
         "VERTRAUTER",
         "viel",
+        "Voitsberg",
         "Weiterbildung",
         "weitere",
         "weiterzuentwickeln",
@@ -170,6 +177,7 @@
     "cSpell.ignoreWords": [
         "Boilerspezialist",
         "Pirchäckerstraße",
+        "swiperjs",
         "ueber"
     ]
 }

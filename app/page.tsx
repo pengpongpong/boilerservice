@@ -6,10 +6,10 @@ import ImageSlider from "@/components/image-slider/ImageSlider"
 
 export const DiscountBanner = () => {
   return (
-    <section className="w-2/3 mt-20 mx-auto text-center">
-      <header className="flex gap-8 justify-center items-center">
+    <section className="w-auto lg:w-2/3 mt-12 mx-auto text-center">
+      <header className="flex gap-4 lg:gap-8 justify-center items-center">
         <Image src={discountLogo} alt="discount logo" width={50} height={50} />
-        <h2 className="my-8 text-4xl tracking-wider">
+        <h2 className="my-8 text-3xl lg:text-4xl tracking-wider font-ubuntu">
           BOILERSERVICE-AKTION 2023
         </h2>
         <Image src={discountLogo} alt="discount logo" width={50} height={50} />
@@ -59,16 +59,15 @@ const Home = () => {
 
   return (
     <>
-      <header className="my-8 flex flex-col justify-center items-center">
+      <header className="mt-12 mb-4 flex flex-col justify-center items-center">
         <Image src={logo} alt="logo" width={450} height={250} />
-        <h1 className="my-12 w-3/4 text-5xl text-center tracking-wide">WILLKOMMEN BEI DER FIRMA PAULMICHL, IHR VERTRAUTER PARTNER RUND UM DEN BOILER</h1>
+        <h1 className="mt-12 w-auto lg:w-3/4 text-4xl lg:text-5xl text-center tracking-wide whitespace-pre-line lg:whitespace-pre font-ubuntu">{`WILLKOMMEN BEI DER FIRMA PAULMICHL\n IHR VERTRAUTER PARTNER RUND UM DEN BOILER`}</h1>
       </header>
       <main className="m-12 flex-grow font-text">
-        <section className="w-3/4 my-4 mx-auto text-center text-xl leading-9">
+        <section className="w-3/4 mx-auto text-center text-xl leading-9">
           <p>Unsere Firma ist seit 50 Jahren spezalisiert auf Boiler bzw. auf Boilerservice,  rufen Sie uns zur Früherkennung von Schäden, vermeiden Sie hohe Betriebs- und Reparaturkosten und erhöhen Sie die Sicherheit in Ihrem Zuhause.</p>
           <p>Erfahren Sie bei uns, wie Sie Kosten sparen und zugleich die Umwelt schonen können, und dabei mit freundlicher und kompetenter Beratung zu jeder Zeit rechnen können. Lesen Sie mehr zu unseren Dienstleistungen und wie wir Ihnen behilflich sein können.</p>
         </section>
-
         <DiscountBanner />
         <section className="my-12">
           <ImageSlider images={images} />

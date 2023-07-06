@@ -2,83 +2,40 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import React, { useEffect } from 'react'
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-import { register } from "swiper/element/bundle";
-
-
-import { SwiperOptions } from "swiper/types";
+import React from 'react'
 import Image from "next/image";
+import Script from "next/script";
 
 interface ImageProps {
     url: string;
 }
 
 const ImageSlider = ({ images }: { images: ImageProps[] }) => {
-    register()
-
-    useEffect(() => {
-        const swiperParams: SwiperOptions = {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "bullets",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: true,
-            },
-            loop: true,
-            breakpoints: {
-                320: {
-                    initialSlide: 1,
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                },
-                640: {
-                    initialSlide: 2,
-                    slidesPerView: 2,
-                    spaceBetween: 0,
-                },
-                770: {
-                    initialSlide: 2,
-                    slidesPerView: 3,
-                    spaceBetween: 0,
-                },
-                1280: {
-                    initialSlide: 2,
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-            },
-            effect: "coverflow",
-            coverflowEffect: {
-                rotate: 20,
-                slideShadows: true,
-            },
-        };
-
-        new Swiper(".swiper", swiperParams);
-    }, [])
-
-
     return (
-        <div className="swiper">
-            <div className="swiper-wrapper">
+        <>
+            <swiper-container
+                loop="true"
+                autoplay-delay="5000"
+                autoplay-disable-on-interaction="true"
+                effect="coverflow"
+                coverflow-effect-rotate="20"
+                coverflow-effect-slide-shadows="true"
+                navigation="true"
+                pagination="true"
+                slides-per-view="3"
+                initial-slide="1"
+                space-between="10"
+                class="h-[30rem]"
+            >
                 {images.map(obj => (
-                    <Image className="swiper-slide" key={obj.url} style={{ width: "auto", height: "auto", objectFit: "cover" }} width={400} height={300} src={obj.url} alt="" />
+                    <swiper-slide key={obj.url}>
+                        <Image className="swiper-slide" width={400} height={400} src={obj.url} alt="" />
+                    </swiper-slide>
                 ))}
-            </div>
-            <div className="swiper-pagination"></div>
+            </swiper-container>
+            <Script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></Script>
+        </>
 
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
-        </div>
     )
 }
 
