@@ -87,16 +87,46 @@ swiper-slide img {
 }
 
 .menu {
+  &__list > li {
+    animation: 0.8s slideOut forwards;
+  }
   &__list {
     visibility: hidden;
     background-color: #4b6bfc !important;
+    width: 100vw;
     height: 0;
-    transition: visibility .5s ease-in-out, height .5s ease-in-out;
+    position: relative;
+    opacity: 0;
+    overflow: hidden;
+    transition: visibility 0.5s ease-in-out, height 0.5s ease-in-out,
+    opacity 0.4s ease-in-out;
 
     &--open {
       visibility: visible;
       height: 20rem;
-      transition: visibility .5s ease-in-out, height .5s ease-in-out;
+      opacity: 1;
     }
+
+    &--open > li {
+      animation: 0.8s slideIn forwards;
+    } 
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100vw);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100vw);
   }
 }

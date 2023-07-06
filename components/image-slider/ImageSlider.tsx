@@ -10,7 +10,7 @@ interface ImageProps {
     url: string;
 }
 
-const ImageSlider = ({ images }: { images: ImageProps[] }) => {
+const ImageSlider = ({ images, slidesPerView }: { images: ImageProps[], slidesPerView: number }) => {
     return (
         <>
             <swiper-container
@@ -22,7 +22,7 @@ const ImageSlider = ({ images }: { images: ImageProps[] }) => {
                 coverflow-effect-slide-shadows="true"
                 navigation="true"
                 pagination="true"
-                slides-per-view="3"
+                slides-per-view={`${slidesPerView}`}
                 initial-slide="1"
                 space-between="10"
                 class="h-[30rem]"

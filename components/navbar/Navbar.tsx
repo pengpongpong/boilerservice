@@ -7,6 +7,9 @@ import clsx from "clsx"
 const NavLink = ({ title, url }: { title: string, url: string }) => {
     return <Link href={url} className="daisy_btn daisy_btn-ghost rounded-xl text-lg tracking-widest text-white z-10">{title}</Link>
 }
+const NavLinkMobile = ({ title, url }: { title: string, url: string }) => {
+    return <Link href={url} className="daisy_btn daisy_btn-ghost rounded-xl text-2xl tracking-widest text-base-100">{title}</Link>
+}
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false)
@@ -17,10 +20,11 @@ const Navbar = () => {
             return setShowMenu(false)
         }
     }
-    const style = clsx({ "menu__list": !showMenu, "menu__list--open": showMenu })
+    const style = clsx({ "menu__list": !showMenu, "menu__list menu__list--open": showMenu })
 
     return (
         <>
+            {/* desktop nav */}
             <header className="hidden lg:block sticky top-0 bg-base-100 z-10">
                 <nav className="my-3 mx-12 flex justify-between items-center">
                     <Link href="/" className="uppercase font-headline text-5xl tracking-widest">Paulmichl</Link>
@@ -62,62 +66,62 @@ const Navbar = () => {
                     />
                 </nav>
             </header>
+            {/* mobile nav */}
             <header className="lg:hidden">
-                <nav className="my-3 mx-8 flex flex-col justify-center items-center">
-                    <Link href="/" className="uppercase font-headline text-4xl tracking-widest">Paulmichl</Link>
+                <nav className="my-3 mx-4 flex flex-col justify-center items-center">
+                    <Link href="/" className="my-2 uppercase font-headline text-4xl tracking-widest">Paulmichl</Link>
+
                     <div className="my-2 flex gap-2 justify-center items-center font-text">
                         <span className="tracking-wide text-sm whitespace-nowrap">Montag - Freitag</span>
-                        <span className="tracking-wide text-sm border-l border-primary pl-2 w-full text-center">08:00 - 17:00</span>
+                        <span className="tracking-wide text-sm border-l border-primary pl-2 text-center">08:00 - 17:00</span>
                     </div>
-                    <div className="flex flex-col justify-center items-start gap-2 font-text tracking-wide">
-                        <span className="flex justify-center items-center gap-2 text-sm">
-                            <Image width={25} height={25} src="bx-phone.svg" alt="" />
-                            <a href="tel:00436641522352">+43 664 152-23-52</a>
-                        </span>
-                        <span className="flex justify-center items-center gap-2 text-sm border-t border-primary pt-2">
-                            <Image width={25} height={25} src="bx-envelope.svg" alt="" />
-                            <a href="mailto:paulmichl.gmbh@gmail.com">paulmichl.gmbh@gmail.com</a>
-                        </span>
-                    </div>
-                </nav>
-                <nav className="w-full h-10 flex gap-32 justify-end items-center font-ubuntu">
-                    <div className="w-full p-4 menu">
-                        <label tabIndex={0} className="daisy_btn daisy_btn-circle" onClick={handleMenu}>
+                    <div className="w-full my-2 flex justify-between items-center relative menu">
+                        <div className="flex flex-col justify-center items-start gap-2 font-text tracking-wide">
+                            <span className="flex justify-center items-center gap-2 text-sm">
+                                <Image width={25} height={25} src="bx-phone.svg" alt="" />
+                                <a href="tel:00436641522352">+43 664 152-23-52</a>
+                            </span>
+                            <span className="flex justify-center items-center gap-2 text-sm border-t border-primary pt-2">
+                                <Image width={25} height={25} src="bx-envelope.svg" alt="" />
+                                <a href="mailto:paulmichl.gmbh@gmail.com">paulmichl.gmbh@gmail.com</a>
+                            </span>
+                        </div>
+                        <label tabIndex={0} className="daisy_btn daisy_btn-circle" onClick={handleMenu} aria-label="open/close navigation menu">
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
                         </label>
-                        <ul tabIndex={0} className={`${style} bg-primary`}>
-                            <li>
-                                <NavLink
-                                    title="Home"
-                                    url="/"
-                                />
-                            </li>
-                            <li>
-                                <NavLink
-                                    title="Boilerservice"
-                                    url="/boilerservice"
-                                />
-                            </li>
-                            <li>
-                                <NavLink
-                                    title="Galerie"
-                                    url="/galerie"
-                                />
-                            </li>
-                            <li>
-                                <NavLink
-                                    title="Über uns"
-                                    url="/ueber-uns"
-                                />
-                            </li>
-                            <li>
-                                <NavLink
-                                    title="Kontakt"
-                                    url="/kontakt"
-                                />
-                            </li>
-                        </ul>
                     </div>
+                    <ul tabIndex={0} className={`${style} bg-primary p-4 flex flex-col justify-center items-center`}>
+                        <li>
+                            <NavLinkMobile
+                                title="Home"
+                                url="/"
+                            />
+                        </li>
+                        <li>
+                            <NavLinkMobile
+                                title="Boilerservice"
+                                url="/boilerservice"
+                            />
+                        </li>
+                        <li>
+                            <NavLinkMobile
+                                title="Galerie"
+                                url="/galerie"
+                            />
+                        </li>
+                        <li>
+                            <NavLinkMobile
+                                title="Über uns"
+                                url="/ueber-uns"
+                            />
+                        </li>
+                        <li>
+                            <NavLinkMobile
+                                title="Kontakt"
+                                url="/kontakt"
+                            />
+                        </li>
+                    </ul>
                 </nav>
             </header>
         </>
