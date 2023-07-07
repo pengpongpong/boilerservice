@@ -17,7 +17,11 @@ module.exports = {
       red: "red",
       white: "white"
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "hero-image": "url('/images/hero.jpg')"
+      }
+    },
   },
   plugins: [require("daisyui")],
 

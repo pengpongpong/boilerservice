@@ -60,7 +60,7 @@ const Home = () => {
 
   return (
     <>
-      <header className="lg:mt-0 mb-4 flex flex-col justify-center items-center hero">
+      <header className="min-h-[85vh] lg:mt-0 mb-4 flex flex-col justify-center items-center bg-hero-image bg-cover bg-no-repeat">
         {/* <Image src={logo} alt="logo" width={450} height={250} /> */}
         <h1 className="mt-12 w-auto lg:w-screen pt-6 pb-6 text-shadow text-3xl lg:text-4xl text-black bg-white text-center tracking-wide whitespace-pre-line lg:whitespace-pre font-ubuntu">{`WILLKOMMEN BEI DER FIRMA PAULMICHL\n IHR VERTRAUTER PARTNER RUND UM DEN BOILER`}</h1>
       </header>
