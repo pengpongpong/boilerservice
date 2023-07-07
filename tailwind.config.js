@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "hero-image": "url('/images/hero.jpg')"
+        "hero-image": "url('https://res.cloudinary.com/dzvrnl80x/image/upload/v1688759836/boilerservice/hero_nysguj.jpg')"
       }
     },
   },
