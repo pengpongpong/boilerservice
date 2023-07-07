@@ -25,23 +25,18 @@ const Navbar = () => {
     return (
         <>
             {/* desktop nav */}
-            <header className="hidden lg:block sticky top-0 bg-base-100 z-10">
-                <nav className="my-3 mx-12 flex justify-between items-center">
-                    <Link href="/" className="uppercase font-headline text-5xl tracking-widest">Paulmichl</Link>
-                    <div className="flex flex-col gap-2 justify-center items-center font-text">
+            <header className="hidden lg:block sticky top-0 bg-base-100 z-10 relative">
+                <nav className="my-3 mx-12 flex justify-center items-center">
+                    <Link href="/" className=" flex flex-col font-headline uppercase">
+                        <span className="text-5xl tracking-widest">Paulmichl</span>
+                        <span className="text-xl text-center">Die Boilerspezialisten</span>
+                    </Link>
+
+                    {/* <div className="flex flex-col gap-2 justify-center items-center font-text">
                         <span className="tracking-widest text-sm">Montag - Freitag</span>
                         <span className="tracking-widest text-sm border-t border-primary pt-2 w-full text-center">08:00 - 17:00</span>
-                    </div>
-                    <div className="flex flex-col justify-center items-start gap-2 font-text tracking-wide">
-                        <span className="flex justify-center items-center gap-2 text-sm">
-                            <Image width={25} height={25} src="bx-phone.svg" alt="" />
-                            <a href="tel:00436641522352">+43 664 152-23-52</a>
-                        </span>
-                        <span className="flex justify-center items-center gap-2 text-sm border-t border-primary pt-2">
-                            <Image width={25} height={25} src="bx-envelope.svg" alt="" />
-                            <a href="mailto:paulmichl.gmbh@gmail.com">paulmichl.gmbh@gmail.com</a>
-                        </span>
-                    </div>
+                    </div> */}
+
                 </nav>
                 <nav className="p-8 bg-primary h-10 flex gap-32 justify-center items-center font-ubuntu">
                     <NavLink
@@ -65,7 +60,25 @@ const Navbar = () => {
                         url="/kontakt"
                     />
                 </nav>
+                <div className="bookmark absolute top-40 mt-8 right-0 flex justify-end">
+                    <div className="flex flex-col items-end">
+                        <div className="triangle_top"></div>
+                        <div className="triangle_bottom"></div>
+                    </div>
+                    <div className="flex flex-col justify-center items-start gap-2 font-text tracking-wide max-w-fit px-4 py-2 bg-red text-white">
+                        <span className="flex justify-center items-center gap-2 text-sm">
+                            <Image width={25} height={25} src="bx-phone.svg" alt="" />
+                            <a href="tel:00436641522352">+43 664 152-23-52</a>
+                        </span>
+                        <span className="flex justify-center items-center gap-2 text-sm border-t border-white pt-2">
+                            <Image width={25} height={25} src="bx-envelope.svg" alt="" />
+                            <a href="mailto:paulmichl.gmbh@gmail.com">paulmichl.gmbh@gmail.com</a>
+                        </span>
+                    </div>
+                </div>
+
             </header>
+
             {/* mobile nav */}
             <header className="lg:hidden">
                 <nav className="my-3 mx-4 flex flex-col justify-center items-center">

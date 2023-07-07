@@ -1,3 +1,5 @@
+const { red } = require("@mui/material/colors");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -10,6 +12,10 @@ module.exports = {
       text: ["Lexend", "sans-serif"],
       headline: ["Bruno Ace", "cursive"],
       ubuntu: ["Ubuntu", "sans-serif"]
+    },
+    colors: {
+      red: "red",
+      white: "white"
     },
     extend: {},
   },

@@ -2,6 +2,7 @@ import Image from "next/image"
 import logo from "public/logo.png"
 import discountLogo from "public/bxs-discount.svg"
 import infoLogo from "public/bx-info-circle.svg"
+import hero from "public/images/hero.jpg"
 import ImageSlider from "@/components/image-slider/ImageSlider"
 
 export const DiscountBanner = () => {
@@ -59,9 +60,9 @@ const Home = () => {
 
   return (
     <>
-      <header className="lg:mt-12 mb-4 flex flex-col justify-center items-center">
-        <Image src={logo} alt="logo" width={450} height={250} />
-        <h1 className="mt-12 w-auto lg:w-3/4 text-3xl lg:text-5xl text-center tracking-wide whitespace-pre-line lg:whitespace-pre font-ubuntu">{`WILLKOMMEN BEI DER FIRMA PAULMICHL\n IHR VERTRAUTER PARTNER RUND UM DEN BOILER`}</h1>
+      <header className="lg:mt-0 mb-4 flex flex-col justify-center items-center hero">
+        {/* <Image src={logo} alt="logo" width={450} height={250} /> */}
+        <h1 className="mt-12 w-auto lg:w-screen pt-6 pb-6 text-shadow text-3xl lg:text-4xl text-black bg-white text-center tracking-wide whitespace-pre-line lg:whitespace-pre font-ubuntu">{`WILLKOMMEN BEI DER FIRMA PAULMICHL\n IHR VERTRAUTER PARTNER RUND UM DEN BOILER`}</h1>
       </header>
       <main className="m-8 lg:m-12 flex-grow font-text">
         <section className="lg:w-3/4 lg:mx-auto text-center lg:text-xl leading-7 lg:leading-9">

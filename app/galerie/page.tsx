@@ -23,7 +23,7 @@ const GaleriePage = () => {
     return (
         <>
             <header>
-                <h1>Galerie</h1>
+                <h1 className="my-8 text-center font-text text-5xl">Galerie</h1>
             </header>
             <main className="flex-grow p-8">
                 <CardContainer images={images} />

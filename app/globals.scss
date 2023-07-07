@@ -21,6 +21,38 @@
   border: 0;
 }
 */
+
+.hero {
+  background-image: url("/images/hero.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  min-height: 85vh;
+}
+
+.bookmark {
+  width: 350px;
+}
+
+.triangle_top {
+	width: 0;
+	height: 0;
+	border-top: 42px solid red;
+	border-left: 50px solid transparent;
+	border-right: 0px solid green;
+}
+
+.triangle_bottom {
+	width: 0;
+	height: 0;
+	border-bottom: 42px solid red;
+	border-left: 50px solid transparent;
+	border-right: 0px solid transparent;
+}
+
+.text-shadow {
+  text-shadow: 3px 2px #00000045;
+}
 .swiper-button-prev,
 .swiper-button-next {
   color: #4b6bfc !important;
